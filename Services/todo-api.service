@@ -1,0 +1,14 @@
+[Unit]
+Description=Auth API service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+ExecStart= /usr/bin/node /microservice-app-example/todos-api/server.js
+
+[Install]
+WantedBy=multi-user.target
