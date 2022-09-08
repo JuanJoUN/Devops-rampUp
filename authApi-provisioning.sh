@@ -20,6 +20,7 @@ fi
 #Run microservice
 
 cd ./microservice-app-example/auth-api
+pwd
 export GO111MODULE=on
 go mod init github.com/bortizf/microservice-app-example/tree/master/auth-api
 go mod tidy

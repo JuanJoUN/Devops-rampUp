@@ -21,6 +21,7 @@ fi
 #Build microservice
 
 cd ./microservice-app-example/users-api
+pwd
 ./mvnw clean install
 
 #Run microservice

@@ -27,9 +27,10 @@ npm -v
 #Clone repo
 
 if [ ! -d ./microservice-app-example ]; then
-	cd 
+	cd ~
 	git clone https://github.com/bortizf/microservice-app-example.git
 	cd ./microservice-app-example/frontend
+    pwd
 fi
 
 # install dependencies

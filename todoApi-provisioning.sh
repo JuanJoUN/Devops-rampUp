@@ -27,12 +27,13 @@ npm -v
 #Clone repo
 
 if [ ! -d ./microservice-app-example ]; then
-	cd 
+	cd ~
 	git clone https://github.com/bortizf/microservice-app-example.git
 fi
 
 #Build microservice
 cd ./microservice-app-example/todos-api
+pwd
 
 npm install
 
@@ -55,9 +56,10 @@ java -jar zipkin.jar > /dev/message-logs 2>&1 &
 
 #Install pm2
 
-echo"-------------Installing pm2-------------"
+echo "-------------Installing pm2-------------"
 npm install pm2 -g
 
 #Run microservice
 
-pm2 start "REDIS_HOST=172.16.0.25 REDIS_PORT=6379 JWT_SECRET=PRFT TODO_API_PORT=8082 npm start"
+
+pm2 start "REDIS_HOST=172.16.0.25 REDIS_PORT=6379 JWT_SECRET=PRFT TODO_API_PORT=8082 npm start" --watch --listen-timeout 2000
