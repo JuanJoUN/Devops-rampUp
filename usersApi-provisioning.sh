@@ -3,12 +3,10 @@
 #Install java JDK 8
 
 sudo apt install openjdk-8-jdk -y
-#echo export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 | sudo tee -a /etc/environment
 touch /etc/profile.d/java.sh
 echo '''export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
 export PATH='$JAVA_HOME'/bin:'$PATH'''' | sudo tee -a /etc/profile.d/java.sh
 source /etc/profile.d/java.sh
-#source /etc/environment
 echo $JAVA_HOME
 
 #Clone repo
