@@ -2,7 +2,6 @@
 
 #Download and install python and Redis
 
-
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
 sudo apt-get update
@@ -11,12 +10,12 @@ sudo apt install -y python3-pip
 
 #Install node
 
-echo"------------Installing node------------"
+echo "------------Installing node------------"
+
 cd ~
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install nodejs
 node -v
-
 
 #Clone microservice repo
 
