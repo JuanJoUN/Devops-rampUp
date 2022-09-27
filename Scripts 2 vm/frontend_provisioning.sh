@@ -4,7 +4,7 @@
 echo "------------Installing node------------"
 cd ~
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt install nodejs
+sudo apt install -y nodejs
 
 node -v 
 npm -v
