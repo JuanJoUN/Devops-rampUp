@@ -22,6 +22,15 @@ if [ ! -d "./microservice-app-example" ]; then
 	git clone https://github.com/bortizf/microservice-app-example.git
 fi
 
+#Install node
+
+echo "------------Installing node------------"
+
+cd ~
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt install -y nodejs
+node -v
+
 #Build microservice
 
 cd ./microservice-app-example/users-api
@@ -80,14 +89,7 @@ sudo apt-get update
 sudo apt-get install -y redis
 sudo apt install -y python3-pip
 
-#Install node
 
-echo "------------Installing node------------"
-
-cd ~
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt install -y nodejs
-node -v
 
 #Build microservice
 
