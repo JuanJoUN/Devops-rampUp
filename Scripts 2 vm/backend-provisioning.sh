@@ -69,10 +69,10 @@ fi
 cd ./microservice-app-example/auth-api
 pwd
 export GO111MODULE=on
-/usr/local/go/bin/go mod init github.com/bortizf/microservice-app-example/tree/master/auth-api
-/usr/local/go/bin/go mod tidy
+/snap/bin/go mod init github.com/bortizf/microservice-app-example/tree/master/auth-api
+/snap/bin/go mod tidy
 echo "Go build"
-/usr/local/go/bin/go build 
+/snap/bin/go build 
 
 #Run microservice
 
